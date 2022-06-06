@@ -14,8 +14,8 @@ const RepoItem = (props) => {
             </div>
             <div className="repo-item-header">
                 <div className="repo-item-last-commit">{repo.updated_at}</div>
-                <div ><NavLink to={`/card/${repo.owner.login}/${repo.name}`}>Open card</NavLink></div>
-            </div>
+                <NavLink to={`/card/${repo.owner.login}/${repo.name}`} className="btn btn-primary">Details</NavLink>
+             </div>
         </div>
 
     )

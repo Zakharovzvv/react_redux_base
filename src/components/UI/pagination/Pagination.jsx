@@ -15,15 +15,29 @@ const Pagination = () => {
     createPages(pages,pagesCount,currentPage)
     console.log(pages,pagesCount,currentPage,totalPages)
     return (
-        <div className="pagination">
+        // <div className="pagination">
+        //     {
+        //         pages.map((page,index)=>
+        //             <span onClick={()=>dispatch(setCurrentPage(page))}
+        //                 className={currentPage==page?"pagination-page-current":"pagination-page"}
+        //                   key={index}>{page}</span>
+        //         )
+        //     }
+        // </div>
+
+    <nav aria-label="...">
+        <ul className="pagination">
             {
                 pages.map((page,index)=>
-                    <span onClick={()=>dispatch(setCurrentPage(page))}
-                        className={currentPage==page?"pagination-page-current":"pagination-page"}
-                          key={index}>{page}</span>
+                    <li  onClick={()=>dispatch(setCurrentPage(page))}
+                          className={currentPage==page?"page-item active":"page-item"}
+                          key={index}><span className="page-link" >{page}</span></li>
                 )
             }
-        </div>
+
+                {/*<a className="page-link" href="#">2</a>*/}
+        </ul>
+    </nav>
     );
 };
 

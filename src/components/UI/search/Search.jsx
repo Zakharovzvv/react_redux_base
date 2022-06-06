@@ -12,14 +12,19 @@ const Search = () => {
 
     function searchClickHandler() {
         dispatch(setCurrentPage(1))
-        dispatch(getRepos('',currentPage,perPage))
+        dispatch(getRepos(searchValue,currentPage,perPage))
     }
 
     return (
-        <div className="search">
-            <input value={searchValue} onChange={(e)=>setSearchValue(e.target.value)} type="text" placeholder="Input repo name" className="search-input"/>
-            <button onClick={()=>searchClickHandler()} className="search-btn">Search</button>
-        </div>
+        // <div className="search">
+        //     <input value={searchValue} onChange={(e)=>setSearchValue(e.target.value)} type="text" placeholder="Input repo name" className="search-input"/>
+        //     <button onClick={()=>searchClickHandler()} className="search-btn">Search</button>
+        // </div>
+    <div className="input-group mb-3 mt-2">
+        <input value={searchValue} onChange={(e)=>setSearchValue(e.target.value)}  type="text" className="form-control" placeholder="Input repo name" aria-label="Recipient's username"
+               aria-describedby="button-addon2"/>
+            <button onClick={()=>searchClickHandler()} className="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+    </div>
     );
 };
 
