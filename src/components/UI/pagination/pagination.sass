@@ -1,0 +1,13 @@
+.pagination
+  margin: 1.5% 1%
+  &-page
+    border: 1px solid lightgray
+    padding: 0.5%
+    margin: 0.5% 0
+    cursor: pointer
+    &-current
+      @extend .pagination-page
+      border: 2px solid lightgray
+      font-weight: 700
+    &:hover
+      background-color: lightgray

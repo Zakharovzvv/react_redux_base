@@ -1,5 +1,5 @@
 {
-  "name": "webpack_template",
+  "name": "react_redux_base",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -29,6 +29,13 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "g": "^2.0.1"
+    "@redux-devtools/extension": "^3.2.2",
+    "axios": "^0.27.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1"
   }
 }
