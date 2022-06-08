@@ -2,8 +2,9 @@ import React from 'react';
 import "./styles/App.sass"
 import Main from "./components/main/Main";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Card from "./components/UI/card/Card";
+import RepoCard from "./components/UI/card/RepoCard";
 import Error from "./components/UI/error/Error";
+import {Container} from "react-bootstrap";
 
 //import Main from "./components/main/Main";
 
@@ -15,16 +16,16 @@ const App = () => {
     //   }
     return (
         <BrowserRouter>
-            <div className="container">
+            <Container className="container">
                 <Routes>
                     <Route path="/" element={<Main/>}/>
                     <Route index element={<Main/>}/>
-                    <Route path="/card/:username/:reponame" element={<Card/>}/>
+                    <Route path="/card/:username/:reponame" element={<RepoCard/>}/>
                     <Route path="/error" element={<Error/>}/>
                     {/*<button onClick={()=>onCountClickHandler()}>Count</button>*/}
                     {/*<div>{count}</div>*/}
                 </Routes>
-            </div>
+            </Container>
         </BrowserRouter>
     );
 }

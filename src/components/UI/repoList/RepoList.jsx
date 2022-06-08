@@ -6,6 +6,7 @@ import ProgressIndicator from "../progressIndicator/ProgressIndicator";
 import Pagination from "../pagination/Pagination";
 import {Redirect, useNavigate} from "react-router-dom";
 import Error from "../error/Error";
+import {Row} from "react-bootstrap";
 
 const RepoList = () => {
     // const gitRepos=props.gitRepos
@@ -25,7 +26,7 @@ const RepoList = () => {
     //     return navigate("/error")
     // }
     return (
-        <div className="repo-list">
+        <Row xs={1} md={2} className="repo-list justify-content-between">
             {
                 isFetchError &&
                 <div className="alert alert-danger" role="alert">
@@ -45,7 +46,7 @@ const RepoList = () => {
                     ? <Pagination/>
                     : ""
             }
-        </div>
+        </Row>
 
     );
 };
